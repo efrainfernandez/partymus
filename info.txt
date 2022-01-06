@@ -1,0 +1,13 @@
+//Video para usar API con nombres
+https://www.youtube.com/watch?v=2Xm9P_tXtK8
+
+//Tomas and Efra (27/12/2021)
+-> We create the project with Angular
+-> We decided more or less the first design
+
+//First steps - Efra (06/01/2022)
+-> We create a new component called main, that is the main page in where we'll put all the main
+things, like the button of events, parties and the profile of the user
+-> We create a new interface called User, to have each user with his id, name, etc
+-> We create the first user in the main (a test user), later we'll create all the 
+interface for register, login etc, but first we want to have the main structure
