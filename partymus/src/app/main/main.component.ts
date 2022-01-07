@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
+import { USERS } from '../mock-users';
 
 @Component({
   selector: 'main',
@@ -17,5 +18,10 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  selectedUser?: User;
+  onSelect(user: User): void {
+    this.selectedUser = user;
+  }
+  users = USERS;
   
 }

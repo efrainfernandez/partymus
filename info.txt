@@ -5,9 +5,16 @@ https://www.youtube.com/watch?v=2Xm9P_tXtK8
 -> We create the project with Angular
 -> We decided more or less the first design
 
-//First steps - Efra (06/01/2022)
+//Efra (06/01/2022)
 -> We create a new component called main, that is the main page in where we'll put all the main
 things, like the button of events, parties and the profile of the user
 -> We create a new interface called User, to have each user with his id, name, etc
 -> We create the first user in the main (a test user), later we'll create all the 
 interface for register, login etc, but first we want to have the main structure
+
+-> We install boostrap (https://www.youtube.com/watch?v=F_rAYIZ4Tuo) 
+
+
+//Efra (07/01/2022)
+-> We create a new ".ts" file with a list of users that latter this should be replace
+with random names with the API https://www.programmableweb.com/api/namey-rest-api
