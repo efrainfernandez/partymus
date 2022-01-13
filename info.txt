@@ -24,3 +24,5 @@ with random names with the API https://www.programmableweb.com/api/namey-rest-ap
 -> We add in app-routing.module the corresponsive links to the different
 -> We add in events/add-event the form 
 -> We add the table to show each event in events/list-event
+-> We add the instructions for save the events form data
+-> We add the services for CRUD and add the model of an event
