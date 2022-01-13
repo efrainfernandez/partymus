@@ -18,3 +18,5 @@ interface for register, login etc, but first we want to have the main structure
 //Efra (07/01/2022)
 -> We create a new ".ts" file with a list of users that latter this should be replace
 with random names with the API https://www.programmableweb.com/api/namey-rest-api
+
+//Efra & Tommy (13/01/2022)
