@@ -6,13 +6,13 @@ header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 // Conecta a la base de datos  con usuario, contraseña y nombre de la BD
-$servidor = "localhost"; $usuario = "root"; $contrasenia = ""; $nombreBaseDatos = "empleados";
+$servidor = "localhost"; $usuario = "root"; $contrasenia = "1234"; $nombreBaseDatos = "partymus";
 $conexionBD = new mysqli($servidor, $usuario, $contrasenia, $nombreBaseDatos);
 
 
 // Consulta datos y recepciona una clave para consultar dichos datos con dicha clave
 if (isset($_GET["consultar"])){
-    $sqlEmpleaados = mysqli_query($conexionBD,"SELECT * FROM empleados WHERE id=".$_GET["consultar"]);
+    $sqlEmpleaados = mysqli_query($conexionBD,"SELECT * FROM events WHERE id=".$_GET["consultar"]);
     if(mysqli_num_rows($sqlEmpleaados) > 0){
         $empleaados = mysqli_fetch_all($sqlEmpleaados,MYSQLI_ASSOC);
         echo json_encode($empleaados);
@@ -22,7 +22,7 @@ if (isset($_GET["consultar"])){
 }
 //borrar pero se le debe de enviar una clave ( para borrado )
 if (isset($_GET["borrar"])){
-    $sqlEmpleaados = mysqli_query($conexionBD,"DELETE FROM empleados WHERE id=".$_GET["borrar"]);
+    $sqlEmpleaados = mysqli_query($conexionBD,"DELETE FROM events WHERE id=".$_GET["borrar"]);
     if($sqlEmpleaados){
         echo json_encode(["success"=>1]);
         exit();
@@ -30,13 +30,12 @@ if (isset($_GET["borrar"])){
     else{  echo json_encode(["success"=>0]); }
 }
 //Inserta un nuevo registro y recepciona en método post los datos de nombre y correo
-if(isset($_GET["insertar"])){
+if(isset($_GET["add"])){
     $data = json_decode(file_get_contents("php://input"));
-    $nombre=$data->nombre;
-    $correo=$data->correo;
-        if(($correo!="")&&($nombre!="")){
+    $name=$data->name;
+        if($name!=""){
             
-    $sqlEmpleaados = mysqli_query($conexionBD,"INSERT INTO empleados(nombre,correo) VALUES('$nombre','$correo') ");
+    $sqlEvents = mysqli_query($conexionBD,"INSERT INTO events(name) VALUES('$name') ");
     echo json_encode(["success"=>1]);
         }
     exit();
@@ -54,11 +53,11 @@ if(isset($_GET["actualizar"])){
     echo json_encode(["success"=>1]);
     exit();
 }
-// Consulta todos los registros de la tabla empleados
-$sqlEmpleaados = mysqli_query($conexionBD,"SELECT * FROM empleados ");
-if(mysqli_num_rows($sqlEmpleaados) > 0){
-    $empleaados = mysqli_fetch_all($sqlEmpleaados,MYSQLI_ASSOC);
-    echo json_encode($empleaados);
+// Consulta todos los registros de la tabla Events
+$sqlEvents = mysqli_query($conexionBD,"SELECT * FROM events ");
+if(mysqli_num_rows($sqlEvents) > 0){
+    $events = mysqli_fetch_all($sqlEvents,MYSQLI_ASSOC);
+    echo json_encode($events);
 }
 else{ echo json_encode([["success"=>0]]); }
 
