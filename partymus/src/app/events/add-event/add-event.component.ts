@@ -22,7 +22,7 @@ export class AddEventComponent implements OnInit {
 
   //function for send the data in the form
   sendData(): any{  //Any info
-    console.log("Me presionan");
+    console.log("Me presionan y este es el valor:");
     console.log(this.eventsForm.value);
   }
 }
