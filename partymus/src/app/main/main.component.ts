@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { USERS } from '../mock-users';
 
+
 @Component({
   selector: 'main',
   templateUrl: './main.component.html',

@@ -7,6 +7,21 @@
 		<title>Party Mus: The best web for Parties</title>
 	</head>
 	<body>
-    <main></main>
+    <!--<main></main>-->
+		<nav class="navbar navbar-expand navbar-light bg-light" id="myTab" role="tablist">
+			<div class="nav navbar-nav">
+				<a class="nav-item nav-link active" href="#"> System <span class="visually-hidden"></span></a>
+				<a class="nav-item nav-link" routerLink="add-event">Add event</a>
+				<!--
+				<a class="nav-item nav-link" routerLink="edit-event">Edit event</a>
+				<a class="nav-item nav-link" routerLink="delete-event">Delete event</a>
+				-->
+				<a class="nav-item nav-link" routerLink="list-event">List event</a>
+			</div>
+		</nav>
+		<div class="container">
+			Container
+			<router-outlet></router-outlet>
+		</div>
 	</body>
 </html>

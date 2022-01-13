@@ -20,3 +20,4 @@ interface for register, login etc, but first we want to have the main structure
 with random names with the API https://www.programmableweb.com/api/namey-rest-api
 
 //Efra & Tommy (13/01/2022)
+-> We create one new folder, with the three options for the events: add, edit and delete
