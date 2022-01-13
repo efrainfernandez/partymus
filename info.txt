@@ -26,3 +26,6 @@ with random names with the API https://www.programmableweb.com/api/namey-rest-ap
 -> We add the table to show each event in events/list-event
 -> We add the instructions for save the events form data
 -> We add the services for CRUD and add the model of an event
+-> We add the API in php for add the data to our database
+-> We create a database with the first Table 'events' for add the differents events
+-> We link the database with the php and the xampp
