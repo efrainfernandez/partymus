@@ -7,11 +7,10 @@ import { DeleteEventComponent } from './events/delete-event/delete-event.compone
 import { ListEventComponent } from './events/list-event/list-event.component';
 
 const routes: Routes = [
-  //{path: '',pathMatch:'full', redirectTo:'add-event'},
+  {path: '',pathMatch:'full', redirectTo:'add-event'},
   {path: 'add-event',component:AddEventComponent},
-  /*
   {path: 'edit-event/:id',component:EditEventComponent},
-  {path: 'delete-event/:id',component:DeleteEventComponent},*/
+  {path: 'delete-event/:id',component:DeleteEventComponent},
   {path: 'list-event',component:ListEventComponent}
 ];
 

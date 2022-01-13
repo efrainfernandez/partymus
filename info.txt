@@ -20,4 +20,7 @@ interface for register, login etc, but first we want to have the main structure
 with random names with the API https://www.programmableweb.com/api/namey-rest-api
 
 //Efra & Tommy (13/01/2022)
--> We create one new folder, with the three options for the events: add, edit and delete
+-> We create one new folder, with the three options for the events: add, list, edit and delete
+-> We add in app-routing.module the corresponsive links to the different
+-> We add in events/add-event the form 
+-> We add the table to show each event in events/list-event
