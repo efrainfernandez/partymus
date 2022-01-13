@@ -18,35 +18,36 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `events`
+-- Base de datos: `empleados`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `events`
+-- Estructura de tabla para la tabla `empleados`
 --
 
-CREATE TABLE `events`(
+CREATE TABLE `empleados` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL
+  `nombre` varchar(255) NOT NULL,
+  `correo` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `events`
+-- Volcado de datos para la tabla `empleados`
 --
 
-INSERT INTO `events`(`id`, `name`) VALUES
-(65, 'Oscar');
+INSERT INTO `empleados` (`id`, `nombre`, `correo`) VALUES
+(65, 'Oscar', 'oscaruh@develoteca.com');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `events`
+-- Indices de la tabla `empleados`
 --
-ALTER TABLE `events`
+ALTER TABLE `empleados`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -54,9 +55,9 @@ ALTER TABLE `events`
 --
 
 --
--- AUTO_INCREMENT de la tabla `events`
+-- AUTO_INCREMENT de la tabla `empleados`
 --
-ALTER TABLE `events`
+ALTER TABLE `empleados`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 COMMIT;
 
