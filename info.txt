@@ -29,3 +29,8 @@ with random names with the API https://www.programmableweb.com/api/namey-rest-ap
 -> We add the API in php for add the data to our database
 -> We create a database with the first Table 'events' for add the differents events
 -> We link the database with the php and the xampp
+
+//Efra & Tommy (14/02/2022)
+-> We use the redirection and extract the data from the API
+-> We show the list of events and how to delete them
+-> We use the API for recovery the data to edit and update

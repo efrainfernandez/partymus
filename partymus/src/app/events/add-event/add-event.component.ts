@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 })
 export class AddEventComponent implements OnInit {
 
-
   eventsForm:FormGroup;
 
   constructor(
@@ -34,9 +33,12 @@ export class AddEventComponent implements OnInit {
     console.log(this.eventsForm.value);
 
     //The subscribe is for do the add
-    this.crudService.AddEvent(this.eventsForm.value).subscribe();
+    this.crudService.AddEvent(this.eventsForm.value).subscribe(
+      response=>{
+      //Enviar la URL al user
+      this.router.navigateByUrl('/list-event');
+    });
 
-    //Enviar la URL al user
-    this.router.navigateByUrl('/list-event');
+    
   }
 }

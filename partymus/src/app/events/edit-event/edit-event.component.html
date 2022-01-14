@@ -5,17 +5,17 @@
     </div>
     <div class="card-body">
         
-        <form action="">
+        <form ngNativeValidate [formGroup]="eventsForm" (ngSubmit)="sendData()">
 
             <div class="mb-3">
               <label for="" class="form-label">Name:</label>
-              <input type="text"
-                class="form-control" name="" id="" aria-describedby="helpId" placeholder="Write the name of the Event">
+              <input required type="text"
+                class="form-control" name="" formControlName="name" id="" aria-describedby="helpId" placeholder="Write the name of the Event">
             </div>
 
             <div class="btn-group" role="group" aria-label="">
-                <button type="button" class="btn btn-success">Add</button>
-                <button type="button" class="btn btn-primary">Cancel</button>
+                <button type="submit" class="btn btn-warning">Edit event</button>
+                <button type="button" routerLink="/list-event/" class="btn btn-primary">Cancel</button>
             </div>
         </form>
     </div>

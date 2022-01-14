@@ -23,8 +23,17 @@ export class CrudService {
     }
 
     //For delete the data
-    //For insert the data
     DeleteEvent(id:any):Observable<any>{
       return this.clientHttp.get(this.API+"?delete="+id);
+    }
+
+    //Get an unique event
+    GetEvent(id:any):Observable<any>{
+      return this.clientHttp.get(this.API+"?consult="+id);
+    }
+
+    //Edit event
+    EditEvent(id:any, dataEvent:any):Observable<any>{
+      return this.clientHttp.post(this.API+"?update="+id,dataEvent);
     }
 }
