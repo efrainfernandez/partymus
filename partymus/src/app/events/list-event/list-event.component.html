@@ -12,11 +12,13 @@
                </tr>
            </thead>
            <tbody>
-               <tr>
-                   <td>9</td>
-                   <td>CityWall</td>
+               <tr *ngFor="let event of Events; let iControl=index">
+                   <td>{{event.id}}</td>
+                   <td>{{event.name}}</td>
                    <td>
-                       <a routerLink="/edit-event/1"> Edit</a>| Delete 
+                       <a class="btn btn-info" role="button" routerLink="/edit-event/{{event.id}}"> Edit </a> |
+
+                       <a class="btn btn-danger" (click)="deleteEvent(event.id,iControl)" role="button"> Delete </a>  
                     </td>
                </tr>
            </tbody>

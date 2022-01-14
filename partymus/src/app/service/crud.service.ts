@@ -9,7 +9,7 @@ import { AddEventComponent } from '../events/add-event/add-event.component';
   providedIn: 'root'
 })
 export class CrudService {
-  API: string='http://localhost/events/';
+  API: string='http://localhost/events/'; //php API 
   constructor(private clientHttp:HttpClient) {}
 
     //For insert the data
@@ -17,4 +17,14 @@ export class CrudService {
       return this.clientHttp.post(this.API+"?add=1",dataEvent);
     }
 
+    //For Get the Events
+    GetEvents(){
+      return this.clientHttp.get(this.API);
+    }
+
+    //For delete the data
+    //For insert the data
+    DeleteEvent(id:any):Observable<any>{
+      return this.clientHttp.get(this.API+"?delete="+id);
+    }
 }

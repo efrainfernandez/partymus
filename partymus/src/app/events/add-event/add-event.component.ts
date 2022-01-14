@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 import { CrudService } from 'src/app/service/crud.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-event',
@@ -15,7 +16,8 @@ export class AddEventComponent implements OnInit {
 
   constructor(
     public form:FormBuilder,
-    private crudService:CrudService
+    private crudService:CrudService,
+    private router:Router
     ) { 
 
     this.eventsForm = this.form.group({
@@ -33,5 +35,8 @@ export class AddEventComponent implements OnInit {
 
     //The subscribe is for do the add
     this.crudService.AddEvent(this.eventsForm.value).subscribe();
+
+    //Enviar la URL al user
+    this.router.navigateByUrl('/list-event');
   }
 }
