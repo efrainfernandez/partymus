@@ -18,11 +18,13 @@ import { EditUserComponent } from './users/edit-user/edit-user.component';
 import { ListUserComponent } from './users/list-user/list-user.component';
 
 import { MainComponent } from './main/main.component';
+import { MainButtonsComponent } from './main-buttons/main-buttons.component';
 
 const routes: Routes = [
   {path: '',pathMatch:'full', redirectTo:'main'},
 
   {path: 'main', component: MainComponent},
+  {path: 'main-buttons', component: MainButtonsComponent},
 
   {path: 'add-event',component:AddEventComponent},
   {path: 'edit-event/:id',component:EditEventComponent},

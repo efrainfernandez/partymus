@@ -22,6 +22,7 @@ import { ListDormComponent } from './dorms/list-dorm/list-dorm.component';
 import { RegisterUserComponent } from './users/register-user/register-user.component';
 import { ListUserComponent } from './users/list-user/list-user.component';
 import { EditUserComponent } from './users/edit-user/edit-user.component';
+import { MainButtonsComponent } from './main-buttons/main-buttons.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { EditUserComponent } from './users/edit-user/edit-user.component';
     ListDormComponent,
     RegisterUserComponent,
     ListUserComponent,
-    EditUserComponent
+    EditUserComponent,
+    MainButtonsComponent
 
   ],
   imports: [
