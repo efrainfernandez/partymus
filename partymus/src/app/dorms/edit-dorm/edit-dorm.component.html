@@ -1,0 +1,28 @@
+<p>add-dorm works!</p>
+<div class="card">
+    <div class="card-header">
+        Edit Dorm
+    </div>
+    <div class="card-body">
+        
+        <form ngNativeValidate [formGroup]="dormsForm" (ngSubmit)="sendData()">
+
+            <div class="mb-3">
+              <label for="" class="form-label">Name:</label>
+              <input required type="text"
+                class="form-control" name="" formControlName="name" id="" aria-describedby="helpId" placeholder="Write the name of the Dorm">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Location:</label>
+                <input required type="text"
+                  class="form-control" name="" formControlName="location" id="" aria-describedby="helpId" placeholder="The location">
+              </div>
+
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-warning">Edit dorm</button>
+                <button type="button" routerLink="/list-event/" class="btn btn-primary">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

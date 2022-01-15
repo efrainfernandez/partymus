@@ -1,3 +1,7 @@
+
+Creation of dorms
+-----------------
+
 -- phpMyAdmin SQL Dump
 -- version 5.1.0
 -- https://www.phpmyadmin.net/
@@ -27,17 +31,18 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `events`
 --
 
-CREATE TABLE `events`(
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL
+CREATE TABLE `dorms`(
+`id` int(11) NOT NULL,
+`name` varchar(255) NOT NULL,
+`location` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `events`
 --
 
-INSERT INTO `events`(`id`, `name`) VALUES
-(65, 'Oscar');
+INSERT INTO `dorms`(`id`, `name`, `location`) VALUES
+(65, 'Oscar', 'Maribor');
 
 --
 -- Índices para tablas volcadas
@@ -46,7 +51,7 @@ INSERT INTO `events`(`id`, `name`) VALUES
 --
 -- Indices de la tabla `events`
 --
-ALTER TABLE `events`
+ALTER TABLE `dorms`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -56,12 +61,10 @@ ALTER TABLE `events`
 --
 -- AUTO_INCREMENT de la tabla `events`
 --
-ALTER TABLE `events`
+ALTER TABLE `dorms`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-________________________________________
