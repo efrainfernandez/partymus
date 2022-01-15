@@ -1,0 +1,29 @@
+<div class="container text-center main-form" height=100%>
+    <div class="card" style="width: 40rem;">
+        <form class="form-signin animated fadeIn fast">
+            <h1 class="h3 mb-3 font-weight-normal">Sesión Activa</h1>
+            <br>
+        <div class="header">
+
+            <img src="" alt="Imagen de Perfil">
+            <label for="name"><b>Name:</b>{{data.name}}</label>
+            <br>
+        </div>
+        <div class="container">    
+            <label for="username"><b>Username:</b>{{data.username}}</label>
+            <br> 
+            <label for="email"><b>Email:</b>{{data.email}}</label>
+            <br>
+            <label for="password"><b>Password:</b>{{data.password}}</label>
+            <br>
+
+        </div>
+
+            <button type="submit" name="button" class="btn btn-otuline-primary btn-block" routerLinkActive="active">
+                <a routerLink="/login">Exit</a>
+            </button>
+            <br>
+
+        </form>
+    </div>
+</div>
