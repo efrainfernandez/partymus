@@ -12,9 +12,14 @@ import { ListEventComponent } from './events/list-event/list-event.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http';
+
 import { AddDormComponent } from './dorms/add-dorm/add-dorm.component';
 import { EditDormComponent } from './dorms/edit-dorm/edit-dorm.component';
 import { ListDormComponent } from './dorms/list-dorm/list-dorm.component';
+
+import { LoginComponent } from './login/login.component';
+import { UserComponent } from './user/user.component';
+import { SesionComponent } from './sesion/sesion.component';
 
 @NgModule({
   declarations: [
