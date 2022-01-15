@@ -1,0 +1,38 @@
+<div class="card">
+    <!--
+    <div class="card-header">
+        <a class="btn btn-success" routerLink="/add-dorm/"> Add User </a> 
+
+    </div>
+    -->
+    <div class="card-body">
+        <h1>Users List</h1>
+       <table class="table">
+           <thead>
+               <tr>
+                   <th>ID</th>
+                   <th>Username</th>
+                   <th>Password</th>
+                   <th>Name</th>
+                   <th>Nacionality</th>
+                   <th>Dorm</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr *ngFor="let user of Users; let iControl=index">
+                   <td>{{user.id}}</td>
+                   <td>{{user.username}}</td>
+                   <td>{{user.password}}</td>
+                   <td>{{user.name}}</td>
+                   <td>{{user.nacionality}}</td>
+                   <td>{{user.dorm}}</td>
+                   <td>
+                       <a class="btn btn-info" role="button" routerLink="/edit-user/{{user.id}}"> Edit </a> |
+
+                       <a class="btn btn-danger" (click)="deleteUser(user.id,iControl)" role="button"> Delete </a>  
+                    </td>
+               </tr>
+           </tbody>
+       </table>
+    </div>
+</div>

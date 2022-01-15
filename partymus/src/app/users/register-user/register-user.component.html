@@ -1,0 +1,50 @@
+<p>register-user works!</p>
+<div class="card">
+    <div class="card-header">
+        Registration
+    </div>
+    <div class="card-body">   
+        <form ngNativeValidate [formGroup]="usersForm" (ngSubmit)="sendData()">
+
+            <!--Input of username-->
+            <div class="mb-3">
+              <label for="" class="form-label">Username:</label>
+              <input required type="text"
+                class="form-control" name="" formControlName="username" id="" aria-describedby="helpId" placeholder="Write your Username">
+            </div>
+
+            <!--Input of password-->
+            <div class="mb-3">
+                <label for="" class="form-label">Password:</label>
+                <input required type="text"
+                  class="form-control" name="" formControlName="password" id="" aria-describedby="helpId" placeholder="Write a security password">
+            </div>
+
+            <!--Input of name-->
+            <div class="mb-3">
+                <label for="" class="form-label">Name:</label>
+                <input required type="text"
+                  class="form-control" name="" formControlName="name" id="" aria-describedby="helpId" placeholder="Write your Name">
+            </div>
+
+            <!--Input of nacionality-->
+            <div class="mb-3">
+                <label for="" class="form-label">Nacionality:</label>
+                <input required type="text"
+                  class="form-control" name="" formControlName="nacionality" id="" aria-describedby="helpId" placeholder="Write your Nacionality">
+            </div>
+
+            <!--Input of dorm-->
+            <div class="mb-3">
+                <label for="" class="form-label">Dorm:</label>
+                <input required type="text"
+                  class="form-control" name="" formControlName="dorm" id="" aria-describedby="helpId" placeholder="Write your Dorm">
+            </div>
+
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-success">Add</button>
+                <button type="button" routerLink="/main/" class="btn btn-primary">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

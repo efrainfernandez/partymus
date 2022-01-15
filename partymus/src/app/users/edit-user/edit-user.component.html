@@ -1,0 +1,46 @@
+<p>edit-user works!</p>
+<div class="card">
+    <div class="card-header">
+        Edit User
+    </div>
+    <div class="card-body">
+        
+        <form ngNativeValidate [formGroup]="usersForm" (ngSubmit)="sendData()">
+
+            <div class="mb-3">
+              <label for="" class="form-label">username:</label>
+              <input required type="text"
+                class="form-control" name="" formControlName="username" id="" aria-describedby="helpId" placeholder="Write username">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">password:</label>
+                <input required type="text"
+                  class="form-control" name="" formControlName="password" id="" aria-describedby="helpId" placeholder="Write password">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">name:</label>
+                <input required type="text"
+                  class="form-control" name="" formControlName="name" id="" aria-describedby="helpId" placeholder="Write name">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">nacionality:</label>
+                <input required type="text"
+                  class="form-control" name="" formControlName="nacionality" id="" aria-describedby="helpId" placeholder="Write nacionality">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">dorm:</label>
+                <input required type="text"
+                  class="form-control" name="" formControlName="dorm" id="" aria-describedby="helpId" placeholder="Write dorm">
+            </div>
+
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-warning">Edit user</button>
+                <button type="button" routerLink="/list-users/" class="btn btn-primary">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
