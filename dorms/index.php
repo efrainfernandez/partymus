@@ -48,16 +48,17 @@ if(isset($_GET["update"])){
 
     $id=(isset($data->id))?$data->id:$_GET["update"];
     $name=$data->name;
+    $location=$data->location;
     
-    $sqlEvents = mysqli_query($conexionBD,"UPDATE dorms SET name='$name',location=='$location' WHERE id='$id'");
+    $sqlEvents = mysqli_query($conexionBD,"UPDATE dorms SET name='$name',location='$location' WHERE id='$id'");
     echo json_encode(["success"=>1]);
     exit();
 }
 // Consulta todos los registros de la tabla Events
-$sqlEvents = mysqli_query($conexionBD,"SELECT * FROM dorms ");
-if(mysqli_num_rows($sqlEvents) > 0){
-    $events = mysqli_fetch_all($sqlEvents,MYSQLI_ASSOC);
-    echo json_encode($events);
+$sqlDorms = mysqli_query($conexionBD,"SELECT * FROM dorms ");
+if(mysqli_num_rows($sqlDorms) > 0){
+    $dorms = mysqli_fetch_all($sqlDorms,MYSQLI_ASSOC);
+    echo json_encode($dorms);
 }
 else{ echo json_encode([["success"=>0]]); }
 
