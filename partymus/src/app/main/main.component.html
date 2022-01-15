@@ -4,3 +4,34 @@
 <br><br>
 <button type="button" class="btn btn-primary btn-lg btn-block" aria-pressed="true" routerLink="/list-dorm">Dorms</button>
 
+
+<p>We are going to show the test User</p>
+<h2>{{test.name | uppercase }} Details</h2>
+<div><span>id: </span>{{test.id}}</div>
+<div><span>name: </span>{{test.name}}</div>
+
+
+
+<ul>
+    <li>
+        <span>{{test.name}}</span>{{test.id}}
+    </li>
+</ul>
+
+-->
+
+<!-- Nav tabs -->
+<nav class="navbar navbar-expand navbar-light bg-light" id="myTab" role="tablist">
+    <div class="nav navbar-nav">
+        <a class="nav-item nav-link active" href="#">System</a>
+        <a class="nav-item nav-link" href="#">List empleado</a>
+        <a class="nav-item nav-link" href="#">Add event</a>
+    </div>
+</nav>
+
+<ul class="navbar-nav mr-auto">
+    <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['main']">Login</a>
+    </li>
+</ul>
+
