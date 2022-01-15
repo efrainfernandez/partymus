@@ -12,7 +12,7 @@ $conexionBD = new mysqli($servidor, $usuario, $contrasenia, $nombreBaseDatos);
 
 // Consulta datos y recepciona una clave para consultar dichos datos con dicha clave
 if (isset($_GET["consult"])){
-    $sqlEvents = mysqli_query($conexionBD,"SELECT * FROM events WHERE id=".$_GET["consult"]);
+    $sqlEvents = mysqli_query($conexionBD,"SELECT * FROM dorms WHERE id=".$_GET["consult"]);
     if(mysqli_num_rows($sqlEvents) > 0){
         $events = mysqli_fetch_all($sqlEvents,MYSQLI_ASSOC);
         echo json_encode($events);
@@ -22,7 +22,7 @@ if (isset($_GET["consult"])){
 }
 //borrar pero se le debe de enviar una clave ( para borrado )
 if (isset($_GET["delete"])){
-    $sqlEvents = mysqli_query($conexionBD,"DELETE FROM events WHERE id=".$_GET["delete"]);
+    $sqlEvents = mysqli_query($conexionBD,"DELETE FROM dorms WHERE id=".$_GET["delete"]);
     if($sqlEvents){
         echo json_encode(["success"=>1]);
         exit();
@@ -33,9 +33,10 @@ if (isset($_GET["delete"])){
 if(isset($_GET["add"])){
     $data = json_decode(file_get_contents("php://input"));
     $name=$data->name;
-        if($name!=""){
+    $location=$data->location;
+        if(($name!="")&&($location!="")){
             
-    $sqlEvents = mysqli_query($conexionBD,"INSERT INTO events(name) VALUES('$name') ");
+    $sqlEvents = mysqli_query($conexionBD,"INSERT INTO dorms(name, location) VALUES('$name', '$location') ");
     echo json_encode(["success"=>1]);
         }
     exit();
@@ -47,16 +48,17 @@ if(isset($_GET["update"])){
 
     $id=(isset($data->id))?$data->id:$_GET["update"];
     $name=$data->name;
+    $location=$data->location;
     
-    $sqlEvents = mysqli_query($conexionBD,"UPDATE events SET name='$name' WHERE id='$id'");
+    $sqlEvents = mysqli_query($conexionBD,"UPDATE dorms SET name='$name',location='$location' WHERE id='$id'");
     echo json_encode(["success"=>1]);
     exit();
 }
 // Consulta todos los registros de la tabla Events
-$sqlEvents = mysqli_query($conexionBD,"SELECT * FROM events ");
-if(mysqli_num_rows($sqlEvents) > 0){
-    $events = mysqli_fetch_all($sqlEvents,MYSQLI_ASSOC);
-    echo json_encode($events);
+$sqlDorms = mysqli_query($conexionBD,"SELECT * FROM dorms ");
+if(mysqli_num_rows($sqlDorms) > 0){
+    $dorms = mysqli_fetch_all($sqlDorms,MYSQLI_ASSOC);
+    echo json_encode($dorms);
 }
 else{ echo json_encode([["success"=>0]]); }
 

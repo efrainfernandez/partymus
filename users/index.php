@@ -12,18 +12,18 @@ $conexionBD = new mysqli($servidor, $usuario, $contrasenia, $nombreBaseDatos);
 
 // Consulta datos y recepciona una clave para consultar dichos datos con dicha clave
 if (isset($_GET["consult"])){
-    $sqlEvents = mysqli_query($conexionBD,"SELECT * FROM events WHERE id=".$_GET["consult"]);
-    if(mysqli_num_rows($sqlEvents) > 0){
-        $events = mysqli_fetch_all($sqlEvents,MYSQLI_ASSOC);
-        echo json_encode($events);
+    $sqlUsers = mysqli_query($conexionBD,"SELECT * FROM users WHERE id=".$_GET["consult"]);
+    if(mysqli_num_rows($sqlUsers) > 0){
+        $users = mysqli_fetch_all($sqlUsers,MYSQLI_ASSOC);
+        echo json_encode($users);
         exit();
     }
     else{  echo json_encode(["success"=>0]); }
 }
 //borrar pero se le debe de enviar una clave ( para borrado )
 if (isset($_GET["delete"])){
-    $sqlEvents = mysqli_query($conexionBD,"DELETE FROM events WHERE id=".$_GET["delete"]);
-    if($sqlEvents){
+    $sqlUsers = mysqli_query($conexionBD,"DELETE FROM users WHERE id=".$_GET["delete"]);
+    if($sqlUsers){
         echo json_encode(["success"=>1]);
         exit();
     }
@@ -32,10 +32,14 @@ if (isset($_GET["delete"])){
 //Inserta un nuevo registro y recepciona en método post los datos de nombre y correo
 if(isset($_GET["add"])){
     $data = json_decode(file_get_contents("php://input"));
+    $username=$data->username;
+    $password=$data->password;
     $name=$data->name;
-        if($name!=""){
+    $nacionality=$data->nacionality;
+    $dorm=$data->dorm;
+        if(($username!="")&&($password!="")&&($name!="")&&($nacionality!="")){
             
-    $sqlEvents = mysqli_query($conexionBD,"INSERT INTO events(name) VALUES('$name') ");
+    $sqlUsers = mysqli_query($conexionBD,"INSERT INTO users(username, password, name, nacionality, dorm) VALUES('$username', '$password', '$name', '$nacionality', '$dorm') ");
     echo json_encode(["success"=>1]);
         }
     exit();
@@ -46,17 +50,21 @@ if(isset($_GET["update"])){
     $data = json_decode(file_get_contents("php://input"));
 
     $id=(isset($data->id))?$data->id:$_GET["update"];
+    $username=$data->username;
+    $password=$data->password;
     $name=$data->name;
+    $nacionality=$data->nacionality;
+    $dorm=$data->dorm;
     
-    $sqlEvents = mysqli_query($conexionBD,"UPDATE events SET name='$name' WHERE id='$id'");
+    $sqlUsers = mysqli_query($conexionBD,"UPDATE users SET name='$name', password='$password', name='$name', nacionality='$nacionality', dorm='$dorm' WHERE id='$id'");
     echo json_encode(["success"=>1]);
     exit();
 }
-// Consulta todos los registros de la tabla Events
-$sqlEvents = mysqli_query($conexionBD,"SELECT * FROM events ");
-if(mysqli_num_rows($sqlEvents) > 0){
-    $events = mysqli_fetch_all($sqlEvents,MYSQLI_ASSOC);
-    echo json_encode($events);
+// Consulta todos los registros de la tabla users
+$sqlUsers = mysqli_query($conexionBD,"SELECT * FROM users ");
+if(mysqli_num_rows($sqlUsers) > 0){
+    $users = mysqli_fetch_all($sqlUsers,MYSQLI_ASSOC);
+    echo json_encode($users);
 }
 else{ echo json_encode([["success"=>0]]); }
 

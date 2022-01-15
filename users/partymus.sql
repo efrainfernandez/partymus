@@ -24,29 +24,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `events`
+-- Estructura de tabla para la tabla `users`
 --
 
-CREATE TABLE `events`(
+CREATE TABLE `users`(
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `nacionality` varchar(255) NOT NULL,
+  `dorm` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `events`
+-- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `events`(`id`, `name`) VALUES
-(65, 'Oscar');
+INSERT INTO `users`(`id`, `username`, `password`, `name`, `nacionality`, `dorm`) VALUES
+(65, 'Oscar', '1234', 'Oscar Felipe', 'Spanish', 'CityWall');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `events`
+-- Indices de la tabla `users`
 --
-ALTER TABLE `events`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -54,9 +58,9 @@ ALTER TABLE `events`
 --
 
 --
--- AUTO_INCREMENT de la tabla `events`
+-- AUTO_INCREMENT de la tabla `users`
 --
-ALTER TABLE `events`
+ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 COMMIT;
 
@@ -64,4 +68,7 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
-________________________________________
+-- ________________________________________
+
+-- Error Code: 1064. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`dorm` varchar(255) NOT NULL ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4' at line 7
+
