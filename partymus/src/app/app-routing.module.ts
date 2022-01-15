@@ -31,7 +31,7 @@ const routes: Routes = [
     
   {path: 'login',component:LoginComponent},
   {path: 'user',component:UserComponent},
-  {path: 'sesion',component:SesionComponent}
+  {path: 'sesion',component:SesionComponent},
 
   {path: 'add-dorm',component:AddDormComponent},
   {path: 'edit-dorm/:id',component:EditDormComponent},
@@ -39,7 +39,7 @@ const routes: Routes = [
 
   {path: 'register-user',component: RegisterUserComponent},
   {path: 'edit-user/:id',component: EditUserComponent},
-  {path: 'list-user',component: ListUserComponent},
+  {path: 'list-user',component: ListUserComponent}
 ];
 
 @NgModule({

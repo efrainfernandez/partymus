@@ -1,9 +1,6 @@
 <p>main works!</p>
-    <!-- Content here -->
-<button type="button" class="btn btn-primary btn-lg btn-block " aria-pressed="true" routerLink="/list-event">Events</button>
-<br><br>
-<button type="button" class="btn btn-primary btn-lg btn-block" aria-pressed="true" routerLink="/list-dorm">Dorms</button>
-
+<!--
+<h2>{{hero}}</h2>
 
 <p>We are going to show the test User</p>
 <h2>{{test.name | uppercase }} Details</h2>
@@ -21,17 +18,12 @@
 -->
 
 <!-- Nav tabs -->
-<nav class="navbar navbar-expand navbar-light bg-light" id="myTab" role="tablist">
-    <div class="nav navbar-nav">
-        <a class="nav-item nav-link active" href="#">System</a>
-        <a class="nav-item nav-link" href="#">List empleado</a>
-        <a class="nav-item nav-link" href="#">Add event</a>
-    </div>
-</nav>
+<button type="button" class="btn btn-primary btn-lg btn-block " aria-pressed="true" routerLink="/list-event">Events</button>
+<br><br>
+<button type="button" class="btn btn-primary btn-lg btn-block" aria-pressed="true" routerLink="/list-dorm">Dorms</button>
 
 <ul class="navbar-nav mr-auto">
     <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['main']">Login</a>
+        <a class="nav-link" routerLink="/login">Login</a>
     </li>
 </ul>
-

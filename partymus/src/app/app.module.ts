@@ -34,7 +34,7 @@ import { EditUserComponent } from './users/edit-user/edit-user.component';
     ListEventComponent,
     LoginComponent,
     UserComponent,
-    SesionComponent
+    SesionComponent,
     AddDormComponent,
     EditDormComponent,
     ListDormComponent,
