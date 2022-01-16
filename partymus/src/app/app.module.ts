@@ -16,6 +16,7 @@ import { SesionComponent } from './sesion/sesion.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http';
+
 import { AddDormComponent } from './dorms/add-dorm/add-dorm.component';
 import { EditDormComponent } from './dorms/edit-dorm/edit-dorm.component';
 import { ListDormComponent } from './dorms/list-dorm/list-dorm.component';
@@ -24,6 +25,10 @@ import { ListUserComponent } from './users/list-user/list-user.component';
 import { EditUserComponent } from './users/edit-user/edit-user.component';
 import { MainButtonsComponent } from './main-buttons/main-buttons.component';
 
+
+import { LoginComponent } from './login/login.component';
+import { UserComponent } from './user/user.component';
+import { SesionComponent } from './sesion/sesion.component';
 
 @NgModule({
   declarations: [
