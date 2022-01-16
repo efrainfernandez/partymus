@@ -10,10 +10,6 @@ import { EditEventComponent } from './events/edit-event/edit-event.component';
 import { DeleteEventComponent } from './events/delete-event/delete-event.component';
 import { ListEventComponent } from './events/list-event/list-event.component';
 
-import { LoginComponent } from './login/login.component';
-import { UserComponent } from './user/user.component';
-import { SesionComponent } from './sesion/sesion.component';
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http';
 import { AddDormComponent } from './dorms/add-dorm/add-dorm.component';
