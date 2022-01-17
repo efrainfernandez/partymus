@@ -1,46 +1,59 @@
-<p>register-user works!</p>
-<div class="card">
-    <div class="card-header">
-        Registration
-    </div>
-    <div class="card-body">   
+<div class="container">
+    <div class="card">
+        <h1 class="h3 mb-3 font-weight-normal">REGISTRATION</h1>
         <form ngNativeValidate [formGroup]="usersForm" (ngSubmit)="sendData()">
 
             <!--Input of username-->
-            <div class="mb-3">
-              <label for="" class="form-label">Username:</label>
-              <input required type="text"
-                class="form-control" name="" formControlName="username" id="" aria-describedby="helpId" placeholder="Write your Username">
+            <div class="box">
+                <label for="" class="form-label">Username:</label>
+                <div>
+                    <input required type="text" class="form-control" name="" formControlName="username" id=""
+                        aria-describedby="helpId" placeholder="Write your Username">
+                    <br>
+                </div>
             </div>
 
             <!--Input of password-->
-            <div class="mb-3">
+            <div class="box">
                 <label for="" class="form-label">Password:</label>
-                <input required type="text"
-                  class="form-control" name="" formControlName="password" id="" aria-describedby="helpId" placeholder="Write a security password">
+                <div>
+                    <input required type="text" class="form-control" name="" formControlName="password" id=""
+                        aria-describedby="helpId" placeholder="Write a security password">
+                    <br>
+                </div>
             </div>
 
             <!--Input of name-->
-            <div class="mb-3">
+            <div class="box">
                 <label for="" class="form-label">Name:</label>
-                <input required type="text"
-                  class="form-control" name="" formControlName="name" id="" aria-describedby="helpId" placeholder="Write your Name">
+                <div>
+                    <input required type="text" class="form-control" name="" formControlName="name" id=""
+                        aria-describedby="helpId" placeholder="Write your Name">
+                    <br>
+                </div>
             </div>
 
             <!--Input of nacionality-->
-            <div class="mb-3">
+            <div class="box">
                 <label for="" class="form-label">Nacionality:</label>
-                <input required type="text"
-                  class="form-control" name="" formControlName="nacionality" id="" aria-describedby="helpId" placeholder="Write your Nacionality">
+                <div>
+                    <input required type="text" class="form-control" name="" formControlName="nacionality" id=""
+                        aria-describedby="helpId" placeholder="Write your Nacionality">
+                    <br>
+                </div>
             </div>
 
             <!--Input of dorm-->
-            <div class="mb-3">
+            <div class="box">
                 <label for="" class="form-label">Dorm:</label>
-                <input required type="text"
-                  class="form-control" name="" formControlName="dorm" id="" aria-describedby="helpId" placeholder="Write your Dorm">
+                <div>
+                    <input required type="text" class="form-control" name="" formControlName="dorm" id=""
+                        aria-describedby="helpId" placeholder="Write your Dorm">
+                    <br>
+                </div>
             </div>
 
+            
             <div class="btn-group" role="group" aria-label="">
                 <button type="submit" class="btn btn-success">Add</button>
                 <button type="button" routerLink="/main/" class="btn btn-primary">Cancel</button>

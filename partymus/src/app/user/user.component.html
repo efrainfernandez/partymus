@@ -2,29 +2,43 @@
     <div class="card" style="width: 40rem;">
         <form class="form-signin animated fadeIn fast">
 
-
-
-            <label for="name">Name</label>
-            <input type="name" name="name" class="form-control" placeholder="Type your name" required>
-            <br>
-
-            <label for="name">Apellido</label>
-            <input type="name" name="apellido" class="form-control" placeholder="Type your apellido" required>
-            <br>
-
-            <label for="username">Username</label>
-            <input type="text" name="username" class="form-control" placeholder="Text your Username" required>
-            <br>
-
-            <label for="email">Email</label>
-            <input type="email" name="email" class="form-control" placeholder="Type yor email" required> <!--autofocus para pedir @-->
-            <br>
-
-            
-            <label for="password">Password</label>
-            <input type="password" name="password" class="form-control" placeholder="Text your Password" required>
-            <br>
-
+            <div class="box">
+                <label for="name">Name</label>
+                <div>
+                    <input type="name" name="name" class="form-control" placeholder="Type your name" required>
+                    <br>
+                </div>
+            </div>
+            <div class="box">
+                <label for="name">Apellido</label>
+                <div>
+                    <input type="name" name="apellido" class="form-control" placeholder="Type your apellido" required>
+                    <br>
+                </div>
+            </div>
+            <div class="box">
+                <label for="username">Username</label>
+                <div>
+                    <input type="text" name="username" class="form-control" placeholder="Text your Username" required>
+                    <br>
+                </div>
+            </div>
+            <div class="box">
+                <label for="email">Email</label>
+                <div>
+                    <input type="email" name="email" class="form-control" placeholder="Type yor email" required>
+                    <!--autofocus para pedir @-->
+                    <br>
+                </div>
+            </div>
+            <div class="box">
+                <label for="password">Password</label>
+                <div>
+                    <input type="password" name="password" class="form-control" placeholder="Text your Password"
+                        required>
+                    <br>
+                </div>
+            </div>
 
             <button type="submit" name="button" class="btn btn-outline-primary btn-block" routerLinkActive="active">
                 <a routerLink="/login">Register</a>

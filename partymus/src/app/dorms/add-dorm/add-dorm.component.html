@@ -3,26 +3,30 @@
     <div class="card-header">
         Add Dorm
     </div>
-    <div class="card-body">   
+    <div class="card-body">
         <form ngNativeValidate [formGroup]="dormsForm" (ngSubmit)="sendData()">
 
             <!--Input of name-->
             <div class="mb-3">
-              <label for="" class="form-label">Name:</label>
-              <input required type="text"
-                class="form-control" name="" formControlName="name" id="" aria-describedby="helpId" placeholder="Write the name of the Dorm">
+                <label for="" class="form-label">Name:</label>
+                <div>
+                    <input required type="text" class="form-control" name="" formControlName="name" id=""
+                        aria-describedby="helpId" placeholder="Write the name of the Dorm">
+                </div>
             </div>
 
             <!--Input of location-->
             <div class="mb-3">
                 <label for="" class="form-label">Location:</label>
-                <input required type="text"
-                  class="form-control" name="" formControlName="location" id="" aria-describedby="helpId" placeholder="Write the location">
-              </div>
+                <div>
+                    <input required type="text" class="form-control" name="" formControlName="location" id=""
+                        aria-describedby="helpId" placeholder="Write the location">
+                </div>
+            </div>
 
             <div class="btn-group" role="group" aria-label="">
                 <button type="submit" class="btn btn-success">Add</button>
-                <button type="button" routerLink="/list-event/" class="btn btn-primary">Cancel</button>
+                <button type="button" routerLink="/list-dorm/" class="btn btn-primary">Cancel</button>
             </div>
         </form>
     </div>

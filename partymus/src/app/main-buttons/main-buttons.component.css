@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',  sans-serif;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 80vw;
+    border: none;
+    top: 50%;
+    margin: 15px;
+}
+
+.card .btn-profile:hover{
+    background: linear-gradient(to bottom, #3e493e, #25502ac4);
+}
+
+.card .btn-event:hover{
+    background: linear-gradient(to bottom, #6b3338, #9b4839c4);
+}
+
+.card .btn-dorm:hover{
+    background: linear-gradient(to bottom, #3e3d74, #2c2a8fd8);
+}
+.card .btn{
+    width: 750px;
+    
+    height: 100%;
+    color: white;
+    background: linear-gradient(to top, #4d4d4d, #1f1f1fc4);
+    margin: 15px;
+    border-radius: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 1.5em;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.card .btn::before, .card .btn::after{
+    content: '';
+    position: absolute;
+    background: #171717;
+    width: 100%;
+    height: 40%;
+    z-index: -10;
+    border-radius: 15px 15px 0 0;
+    transition: all .4s;
+}
+
+
+
+.card .btn::before{
+    top:0;
+}
+
+.card .btn:hover::before{
+    transform: translateY(-20PX);
+}
+
+.card .btn::after{
+    bottom:10px;
+    height: 60%;
+    border-radius: 0 0 15px 15px;
+}
+
+.card .btn .icon{
+    width: 60px;
+    height: 60px;
+    background: #3a0311;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.card .btn h4{
+    margin: 0.5em;
+}
+
+
+.card .btn p{
+    margin: 0.5em;
+    font-size: 0.8em;
+    display: none;
+    opacity: 0;
+    transition: all .4s;
+}
+.card .btn:hover p{
+    display: block;
+    opacity: 1;
+}

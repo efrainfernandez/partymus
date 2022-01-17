@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',  sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+}
+
+.card {
+    background: rgb(243, 243, 243);
+    width: 450px;
+    height: 550px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    padding: 2em;
+    border: 3px solid white;
+}
+
+.class .h3{
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.box{
+    margin: 0.2em 0;
+}
+
+.container .box label{
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.container .box div{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 0.5em 0;
+}
+
+.container .box input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    padding-left: 0.8em;
+    border-radius: 10px;
+    transition: all .4s;
+}
+
+.container .box input:focus::placeholder{
+    color: white;
+}
+
+.container .box div::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 102%;
+    height: 105%;
+    border-radius: 10px;
+    background: linear-gradient(to right, #202020, #464646c5);
+}
+
+/*Accept botton*/
+.btn-group .btn-success{
+    margin: 10px;
+    padding: 0 15px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #469268, #1c502c);
+}
+
+/*Cancel Botton*/
+.btn-group .btn-primary{
+    margin: 10px;
+    padding: 0 15px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #924646, #501c1c);
+}
