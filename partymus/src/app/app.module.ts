@@ -12,13 +12,19 @@ import { ListEventComponent } from './events/list-event/list-event.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http';
+
 import { AddDormComponent } from './dorms/add-dorm/add-dorm.component';
 import { EditDormComponent } from './dorms/edit-dorm/edit-dorm.component';
 import { ListDormComponent } from './dorms/list-dorm/list-dorm.component';
 import { RegisterUserComponent } from './users/register-user/register-user.component';
 import { ListUserComponent } from './users/list-user/list-user.component';
 import { EditUserComponent } from './users/edit-user/edit-user.component';
+import { MainButtonsComponent } from './main-buttons/main-buttons.component';
 
+
+import { LoginComponent } from './login/login.component';
+import { UserComponent } from './user/user.component';
+import { SesionComponent } from './sesion/sesion.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +36,14 @@ import { EditUserComponent } from './users/edit-user/edit-user.component';
     ListEventComponent,
     LoginComponent,
     UserComponent,
-    SesionComponent
+    SesionComponent,
     AddDormComponent,
     EditDormComponent,
     ListDormComponent,
     RegisterUserComponent,
     ListUserComponent,
-    EditUserComponent
+    EditUserComponent,
+    MainButtonsComponent
 
   ],
   imports: [
