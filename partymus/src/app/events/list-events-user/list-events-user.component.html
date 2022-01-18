@@ -1,0 +1,26 @@
+<div class="card">
+
+    <div class="card-body">
+        <h1>Events List</h1>
+       <table class="table">
+           <thead>
+               <tr>
+                   <th>ID</th>
+                   <th>Name</th>
+                   <th>Acciones</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr class="info-event" *ngFor="let event of Events; let iControl=index">
+                   <td>{{event.id}}</td>
+                   <td>{{event.name}}</td>
+                   <td>
+                       <a class="btn btn-info" role="button" routerLink="/edit-event/{{event.id}}"> Edit </a>
+
+                    </td>
+               </tr>
+           </tbody>
+       </table>
+        
+    </div>
+</div>

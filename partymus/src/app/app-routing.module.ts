@@ -21,6 +21,12 @@ import { ListUserComponent } from './users/list-user/list-user.component';
 import { MainComponent } from './main/main.component';
 import { MainButtonsComponent } from './main-buttons/main-buttons.component';
 
+import { EventsAdminComponent } from './events/events-admin/events-admin.component';
+
+import { ListEventsUserComponent } from './events/list-events-user/list-events-user.component';
+import { ListDormsUserComponent } from './dorms/list-dorms-user/list-dorms-user.component';
+
+
 const routes: Routes = [
   {path: '',pathMatch:'full', redirectTo:'main'},
 
@@ -41,6 +47,14 @@ const routes: Routes = [
   {path: 'register-user',component: RegisterUserComponent},
   {path: 'edit-user/:id',component: EditUserComponent},
   {path: 'list-user',component: ListUserComponent},
+  {path: 'events-admin',component: EventsAdminComponent},
+  
+  {path: ' list-events-user',component:  ListEventsUserComponent},
+  {path: ' list-dorms-user',component:  ListDormsUserComponent}
+  
+ 
+
+  
 
 ];
 

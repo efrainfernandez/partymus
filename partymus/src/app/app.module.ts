@@ -24,6 +24,9 @@ import { MainButtonsComponent } from './main-buttons/main-buttons.component';
 
 import { LoginComponent } from './login/login.component';
 import { SesionComponent } from './sesion/sesion.component';
+import { EventsAdminComponent } from './events/events-admin/events-admin.component';
+import { ListEventsUserComponent } from './events/list-events-user/list-events-user.component';
+import { ListDormsUserComponent } from './dorms/list-dorms-user/list-dorms-user.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,9 @@ import { SesionComponent } from './sesion/sesion.component';
     ListUserComponent,
     EditUserComponent,
     MainButtonsComponent,
+    EventsAdminComponent,
+    ListEventsUserComponent,
+    ListDormsUserComponent,
   ],
   imports: [
     BrowserModule,
