@@ -12,6 +12,7 @@
 			<div class="nav navbar-nav">
 				<a class="nav-item nav-link active" href="#"> Partymus ✨<span class="visually-hidden"></span>
 				</a>
+
 				<a class="nav-item nav-link" *ngIf="logoutbtn" routerLink="list-event">Events</a>
 				<a class="nav-item nav-link" *ngIf="logoutbtn" routerLink="list-dorm">Dorms</a>
 				<a class="nav-item nav-link" *ngIf="logoutbtn" routerLink="list-user">Users</a>				
@@ -19,6 +20,7 @@
 				<a class="nav-item nav-link" *ngIf="logoutbtn" class="btn btn-primary" (click)="logout()">logout</a>
 				<a class="nav-item nav-link" *ngIf="loginbtn" class="btn btn-outline-secondary" routerLink="register-user">Login</a>
 				<a class="nav-item nav-link" *ngIf="loginbtn" class="btn btn-outline-secondary" routerLink="register-user">Register</a>
+
 			</div>
 		</nav>
 		<div>

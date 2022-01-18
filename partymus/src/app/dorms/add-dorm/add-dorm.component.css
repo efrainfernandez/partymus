@@ -1,14 +1,33 @@
-
-.card{
+.card {
+    width: 1250px;
+    height: 550px;
     margin: 25px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: black; 
+    border: 2px solid black;   
+
+    background: linear-gradient(to bottom, #444444, #262575b0);
+    padding: 2em;
+}
+
+.card-header{
+    border-radius: 15px;
+    width: auto;
+    background-color: rgb(30, 30, 41);
+}
+
+.card-header h3{
+    text-align: center;
+    justify-content: center;
+    color: rgb(235, 235, 235);
+
 }
 
 .box{
     margin: 0.2em 0;
-}
-
-.card .mb-3 label{
-    color: rgba(255,255,255, 0.75);
 }
 
 .card-body .mb-3 div{
@@ -20,7 +39,7 @@
 
 .card-body .mb-3 input{
     position: absolute;
-    width: 100%;
+    width: 80%;
     height: 100%;
     background: rgb(255, 255, 255);
     color: black;
@@ -35,32 +54,50 @@
     color: white;
 }
 
+
+/*Contenedor the texto */
 .card-body .mb-3 div::before{
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 102%;
-    height: 105%;
+    width: 60%;
+    height: 110%;
     border-radius: 10px;
-    background: linear-gradient(to right, #202020, #464646c5);
+    background: rgba(0, 0, 0, 0.178)
 }
 
 
-
+.btn-group{
+    width: 300px;
+    height:40px;
+}
 /*Accept botton*/
 .btn-group .btn-success{
-    margin: 10px;
-    padding: 0 15px;
+    width: 100px;
+    height: 40px;
+    border:none;
     border-radius: 10px;
+    margin: 0.5em;
+    transform: translate(-1%);
+    cursor: pointer;
+    color: white;
     background: linear-gradient(to bottom, #469268, #1c502c);
+    transition: all .4s;
 }
 
 /*Cancel Botton*/
 .btn-group .btn-primary{
-    margin: 10px;
-    padding: 0 15px;
+
+    width: 100px;
+    height: 40px;
+    border: none;
     border-radius: 10px;
+    margin: 0.5em;
+    transform: translate(-1%);
+    cursor: pointer;
+    color: white;
     background: linear-gradient(to bottom, #924646, #501c1c);
+    transition: all .4s;
 }

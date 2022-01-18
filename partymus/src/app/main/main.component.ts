@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import { User } from '../user';
+
 
 
 @Component({
@@ -13,6 +15,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
   /*
   selectedUser?: User;

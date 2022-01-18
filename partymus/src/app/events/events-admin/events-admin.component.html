@@ -1,8 +1,5 @@
 <div class="card">
-    <div class="card-header">
-        <a class="btn btn-success" routerLink="/add-event/"> Add New Event </a> 
 
-    </div>
     <div class="card-body">
         <h1>Events List</h1>
        <table class="table">
@@ -18,9 +15,8 @@
                    <td>{{event.id}}</td>
                    <td>{{event.name}}</td>
                    <td>
-                       <a class="btn btn-info" role="button" routerLink="/edit-event/{{event.id}}"> Edit </a> |
+                       <a class="btn btn-info" role="button" routerLink="/edit-event/{{event.id}}"> Edit </a>
 
-                       <a class="btn btn-danger" (click)="deleteEvent(event.id,iControl)" role="button"> Delete </a>  
                     </td>
                </tr>
            </tbody>

@@ -7,6 +7,7 @@ import { CrudService } from 'src/app/service/crud.service';
   templateUrl: './list-dorm.component.html',
   styleUrls: ['./list-dorm.component.css']
 })
+
 export class ListDormComponent implements OnInit {
 
   Dorms:any;
