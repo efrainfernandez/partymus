@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <a class="btn btn-success" routerLink="/add-event/"> Add Event </a> 
+        <a class="btn btn-success" routerLink="/add-event/"> Add New Event </a> 
 
     </div>
     <div class="card-body">
@@ -14,7 +14,7 @@
                </tr>
            </thead>
            <tbody>
-               <tr *ngFor="let event of Events; let iControl=index">
+               <tr class="info-event" *ngFor="let event of Events; let iControl=index">
                    <td>{{event.id}}</td>
                    <td>{{event.name}}</td>
                    <td>

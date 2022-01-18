@@ -1,0 +1,69 @@
+.card {
+    width: 1250px;
+    height: 550px;
+    margin: 25px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: black; 
+    border: 2px solid black;   
+
+    background: linear-gradient(to bottom, #444444, #262575b0);
+    padding: 2em;
+}
+
+.card-header{
+    border-radius: 15px;
+    width: auto;
+    background-color: rgb(30, 30, 41);
+}
+
+.card-header h3{
+    text-align: center;
+    justify-content: center;
+    color: rgb(235, 235, 235);
+
+}
+
+.box{
+    margin: 0.2em 0;
+}
+
+
+
+
+
+
+.btn-group{
+    width: 300px;
+    height:40px;
+}
+/*Accept botton*/
+.btn-group .btn-warning{
+    width: 100px;
+    height: 40px;
+    border:none;
+    border-radius: 10px;
+    margin: 0.5em;
+    transform: translate(-1%);
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(to bottom, #928d46, #4f501c);
+    transition: all .4s;
+}
+
+/*Cancel Botton*/
+.btn-group .btn-primary{
+
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    margin: 0.5em;
+    transform: translate(-1%);
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(to bottom, #924646, #501c1c);
+    transition: all .4s;
+}
