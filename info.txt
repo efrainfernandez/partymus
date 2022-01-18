@@ -39,3 +39,4 @@ with random names with the API https://www.programmableweb.com/api/namey-rest-ap
 //Efra & Tommy (15/01/2022)
 -> We create the login and register page
 -> We restructured all the page
+asd
