@@ -25,6 +25,8 @@ import { MainButtonsComponent } from './main-buttons/main-buttons.component';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
 import { SesionComponent } from './sesion/sesion.component';
+import { RouterModule } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { SesionComponent } from './sesion/sesion.component';
     RegisterUserComponent,
     ListUserComponent,
     EditUserComponent,
-    MainButtonsComponent
+    MainButtonsComponent,
+    DashboardComponent
 
   ],
   imports: [
@@ -51,7 +54,8 @@ import { SesionComponent } from './sesion/sesion.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

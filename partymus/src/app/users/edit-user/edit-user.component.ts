@@ -29,21 +29,17 @@ export class EditUserComponent implements OnInit {
       response=>{
         console.log(response);
         this.usersForm.setValue({
-          username:response[0]['username'],
-          password:response[0]['password'],
           name:response[0]['name'],
-          nacionality:response[0]['nacionality'],
-          dorm:response[0]['dorm']
+          password:response[0]['password'],
+          email:response[0]['email']
         });
       }
     );
     this.usersForm=this.form.group(
       {
-      username:[''],
-      password:[''],
       name:[''],
-      nacionality:[''],
-      dorm:['']
+      password:[''],
+      email:['']
       }
     );
   }
