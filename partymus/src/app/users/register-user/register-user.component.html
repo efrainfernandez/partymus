@@ -3,11 +3,11 @@
         <h1 class="h3 mb-3 font-weight-normal">REGISTRATION</h1>
         <form ngNativeValidate [formGroup]="usersForm" (ngSubmit)="sendData()">
 
-            <!--Input of username-->
+            <!--Input of name-->
             <div class="box">
-                <label for="" class="form-label">Username:</label>
+                <label for="" class="form-label">Name:</label>
                 <div>
-                    <input required type="text" class="form-control" name="" formControlName="username" id=""
+                    <input required type="text" class="form-control" name="" formControlName="name" id=""
                         aria-describedby="helpId" placeholder="Write your Username">
                     <br>
                 </div>
@@ -17,42 +17,21 @@
             <div class="box">
                 <label for="" class="form-label">Password:</label>
                 <div>
-                    <input required type="text" class="form-control" name="" formControlName="password" id=""
+                    <input required type="password" class="form-control" name="" formControlName="password" id=""
                         aria-describedby="helpId" placeholder="Write a security password">
                     <br>
                 </div>
             </div>
 
-            <!--Input of name-->
+            <!--Input of email-->
             <div class="box">
-                <label for="" class="form-label">Name:</label>
+                <label for="" class="form-label">Email:</label>
                 <div>
-                    <input required type="text" class="form-control" name="" formControlName="name" id=""
-                        aria-describedby="helpId" placeholder="Write your Name">
+                    <input required type="email" class="form-control" name="" formControlName="email" id=""
+                        aria-describedby="helpId" placeholder="Write your email">
                     <br>
                 </div>
             </div>
-
-            <!--Input of nacionality-->
-            <div class="box">
-                <label for="" class="form-label">Nacionality:</label>
-                <div>
-                    <input required type="text" class="form-control" name="" formControlName="nacionality" id=""
-                        aria-describedby="helpId" placeholder="Write your Nacionality">
-                    <br>
-                </div>
-            </div>
-
-            <!--Input of dorm-->
-            <div class="box">
-                <label for="" class="form-label">Dorm:</label>
-                <div>
-                    <input required type="text" class="form-control" name="" formControlName="dorm" id=""
-                        aria-describedby="helpId" placeholder="Write your Dorm">
-                    <br>
-                </div>
-            </div>
-
             
             <div class="btn-group" role="group" aria-label="">
                 <button type="submit" class="btn btn-success">Add</button>

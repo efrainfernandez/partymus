@@ -10,24 +10,22 @@
     <!--<main></main>-->
 		<nav class="navbar navbar-expand navbar-light bg-light" id="myTab" role="tablist">
 			<div class="nav navbar-nav">
-				<a class="nav-item nav-link active" href="#"> System <span class="visually-hidden"></span>
+				<a class="nav-item nav-link active" href="#"> Partymus ✨<span class="visually-hidden"></span>
 				</a>
-				<div class="party-manager">
-					<a class="nav-item nav-link" routerLink="list-event">Events</a>
-					<a class="nav-item nav-link" routerLink="list-dorm">Dorms</a>
-					<a class="nav-item nav-link" routerLink="list-user">Users</a>
-				</div>
 
-				<div class="users">
-				<!--<a class="nav-item nav-link" routerLink="events-admin">Events</a>-->
-				<a class="nav-item nav-link" routerLink="list-events-user">Events</a>	
-				<a class="nav-item nav-link" routerLink="list-dorms-user">Dorms</a>
-				</div>
-				
+				<a class="nav-item nav-link" *ngIf="logoutbtn" routerLink="list-event">Events</a>
+				<a class="nav-item nav-link" *ngIf="logoutbtn" routerLink="list-dorm">Dorms</a>
+				<a class="nav-item nav-link" *ngIf="logoutbtn" routerLink="list-user">Users</a>				
+				<!--a la derecha-->
+				<a class="nav-item nav-link" *ngIf="logoutbtn" class="btn btn-primary" (click)="logout()">logout</a>
+				<a class="nav-item nav-link" *ngIf="loginbtn" class="btn btn-outline-secondary" routerLink="register-user">Login</a>
+				<a class="nav-item nav-link" *ngIf="loginbtn" class="btn btn-outline-secondary" routerLink="register-user">Register</a>
 
-				<a class="nav-item nav-link" routerLink="register-user">Registration</a>
 			</div>
 		</nav>
+		<div>
+			<p *ngIf="logoutbtn">->Bienvenido, admin</p>
+		</div>
 		<div class="container">
 			<router-outlet></router-outlet>
 		</div>

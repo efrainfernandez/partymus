@@ -7,9 +7,9 @@
         <form ngNativeValidate [formGroup]="usersForm" (ngSubmit)="sendData()">
 
             <div class="mb-3">
-              <label for="" class="form-label">username:</label>
+              <label for="" class="form-label">name:</label>
               <input required type="text"
-                class="form-control" name="" formControlName="username" id="" aria-describedby="helpId" placeholder="Write username">
+                class="form-control" name="" formControlName="name" id="" aria-describedby="helpId" placeholder="Write name">
             </div>
 
             <div class="mb-3">
@@ -19,23 +19,19 @@
             </div>
 
             <div class="mb-3">
-                <label for="" class="form-label">name:</label>
-                <input required type="text"
-                  class="form-control" name="" formControlName="name" id="" aria-describedby="helpId" placeholder="Write name">
+                <label for="" class="form-label">email:</label>
+                <input required type="email"
+                  class="form-control" name="" formControlName="email" id="" aria-describedby="helpId" placeholder="Write email">
             </div>
 
-            <div class="mb-3">
-                <label for="" class="form-label">nacionality:</label>
-                <input required type="text"
-                  class="form-control" name="" formControlName="nacionality" id="" aria-describedby="helpId" placeholder="Write nacionality">
-            </div>
-
+            <!--
             <div class="mb-3">
                 <label for="" class="form-label">dorm:</label>
                 <input required type="text"
                   class="form-control" name="" formControlName="dorm" id="" aria-describedby="helpId" placeholder="Write dorm">
             </div>
-
+            -->
+            
             <div class="btn-group" role="group" aria-label="">
                 <button type="submit" class="btn btn-warning">Edit user</button>
                 <button type="button" routerLink="/list-users/" class="btn btn-primary">Cancel</button>

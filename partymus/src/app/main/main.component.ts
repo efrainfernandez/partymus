@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { User } from '../user';
+
+
+
 @Component({
   selector: 'main',
   templateUrl: './main.component.html',
@@ -11,5 +15,12 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
+  /*
+  selectedUser?: User;
+  onSelect(user: User): void {
+    this.selectedUser = user;
+  }*/
   
 }

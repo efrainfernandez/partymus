@@ -24,9 +24,14 @@ import { MainButtonsComponent } from './main-buttons/main-buttons.component';
 
 import { LoginComponent } from './login/login.component';
 import { SesionComponent } from './sesion/sesion.component';
+
 import { EventsAdminComponent } from './events/events-admin/events-admin.component';
 import { ListEventsUserComponent } from './events/list-events-user/list-events-user.component';
 import { ListDormsUserComponent } from './dorms/list-dorms-user/list-dorms-user.component';
+
+import { RouterModule } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
@@ -45,16 +50,21 @@ import { ListDormsUserComponent } from './dorms/list-dorms-user/list-dorms-user.
     ListUserComponent,
     EditUserComponent,
     MainButtonsComponent,
+
     EventsAdminComponent,
     ListEventsUserComponent,
     ListDormsUserComponent,
+
+    DashboardComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

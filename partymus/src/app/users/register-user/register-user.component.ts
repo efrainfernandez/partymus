@@ -21,11 +21,9 @@ export class RegisterUserComponent implements OnInit {
     ) { 
 
     this.usersForm = this.form.group({
-      username:[''],
-      password:[''],
       name:[''],
-      nacionality:[''],
-      dorm:['']
+      password:[''],
+      email:['']
     });
   }
 
