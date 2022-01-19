@@ -1,0 +1,7 @@
+READ BEFORE USE
+------------------------------
+
+	->You need to have XAMPP and MySql installed
+	->You need to copy the folders: events, dorms and users in /xampp/htdocs if you work with Windows
+	->You need to create a database called "partymus" and to run each "partymus.sql" of this three folders to create the three tables
+	->You need to start apache, mysql and run angular
