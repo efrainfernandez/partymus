@@ -7,12 +7,27 @@
 
 .navbar{
     background: none;
+    width: 100%;
 }
 
-.nav{
+.navbar-nav{
     background: none;
+    width: 100%;
+    justify-content: right;
+    margin-right: 100px;
+    
 }
 
 .nav-item{
     background: none;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-nav a{
+    margin: 0 10px;
+}
+.navbar-nav a:hover{
+background-color: rgb(25, 25, 151);
+
 }
