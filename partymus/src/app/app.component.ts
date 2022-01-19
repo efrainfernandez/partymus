@@ -12,6 +12,7 @@ export class AppComponent {
 
     loginbtn:boolean;
     logoutbtn:boolean;
+    token:any;
 
     constructor(private dataService: ApiService, private router: Router) {
 
@@ -19,11 +20,13 @@ export class AppComponent {
         if(this.dataService.isLoggedIn()){
             console.log("loggedin");
             this.loginbtn=false;
-            this.logoutbtn=true
+            this.logoutbtn=true;
         }else{
             this.loginbtn=true;
-            this.logoutbtn=false
+            this.logoutbtn=false;
         }
+        this.token = this.dataService.getToken();
+        
     }
 
     private changeName(name: boolean): void {
@@ -36,4 +39,6 @@ export class AppComponent {
         window.location.href = window.location.href;
         this.router.navigateByUrl('main');
     }
+
+    
 }

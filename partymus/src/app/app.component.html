@@ -27,16 +27,12 @@
 			</div>
 		</nav>
 		<div>
-			<h2 *ngIf="logoutbtn" style="color:white" style="margin-left: 10px;">Bienvenido, admin</h2>
+			<h2 *ngIf="logoutbtn" style="color:white" style="margin-left: 10px;">Welcome, admin {{token}}</h2>
 		</div>
 		<div class="container">
 			<router-outlet></router-outlet>
 
 		</div>
-	</nav>
-	<div>
-		<p *ngIf="logoutbtn">->Bienvenido, admin</p>
-	</div>
 	<div class="container">
 		<router-outlet></router-outlet>
 	</div>
