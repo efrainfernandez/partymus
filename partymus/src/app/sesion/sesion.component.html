@@ -1,29 +1,55 @@
 <div class="container text-center main-form" height=100%>
     <div class="card" style="width: 40rem;">
         <form class="form-signin animated fadeIn fast">
+                <div class="avatar">
+                    <img src="https://cpng.pikpng.com/pngl/s/289-2898147_avatar-icon-png-blank-person-clipart.png"alt="User image">
+                </div>
+              
+                <div class="profile name"><h1>Name{{Users.name}}</h1></div>
+                <div class="info-user">
+                    <label for="username"><b>Username:</b>{{Users.username}}</label>
+                    <br>
+                    <label for="email"><b>Email:</b>{{Users.email}}</label>
+                    <br>
+                    <label for="password"><b>Password:</b>{{Users.password}}</label>
+                    <br>
+                </div>
+
+                
+            <button type="submit" name="button" class="btn btn-otuline-primary btn-block" routerLinkActive="active">
+                <a routerLink="/main">Exit</a>
+            </button>
+        </form>
+    </div>
+</div>
+
+
+<!--
+
             <h1 class="h3 mb-3 font-weight-normal">Sesión Activa</h1>
             <br>
-        <div class="header">
+            <div class="header">
 
-            <img src="" alt="Imagen de Perfil">
-            <label for="name"><h3>{{data.name}}</h3></label>
-            <br>
-        </div>
-        <div class="info-user">    
-            <label for="username"><b>Username:</b>{{data.username}}</label>
-            <br> 
-            <label for="email"><b>Email:</b>{{data.email}}</label>
-            <br>
-            <label for="password"><b>Password:</b>{{data.password}}</label>
-            <br>
 
-        </div>
+                <label for="name">
+                    <h3>{{data.name}}</h3>
+                </label>
+                <br>
+            </div>
+
+
+            <div class="info-user">
+                <label for="username"><b>Username:</b>{{data.username}}</label>
+                <br>
+                <label for="email"><b>Email:</b>{{data.email}}</label>
+                <br>
+                <label for="password"><b>Password:</b>{{data.password}}</label>
+                <br>
+
+            </div>
 
             <button type="submit" name="button" class="btn btn-otuline-primary btn-block" routerLinkActive="active">
                 <a routerLink="/main">Exit</a>
             </button>
             <br>
-
-        </form>
-    </div>
-</div>
+-->

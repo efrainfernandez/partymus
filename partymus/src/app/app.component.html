@@ -3,6 +3,7 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <html>
+
 	<head>
 		<title>Party Mus: The best web for Parties</title>
 	</head>
@@ -30,6 +31,15 @@
 		</div>
 		<div class="container">
 			<router-outlet></router-outlet>
+
 		</div>
-	</body>
+	</nav>
+	<div>
+		<p *ngIf="logoutbtn">->Bienvenido, admin</p>
+	</div>
+	<div class="container">
+		<router-outlet></router-outlet>
+	</div>
+</body>
+
 </html>
