@@ -13,12 +13,11 @@
            </thead>
            <tbody>
                <tr class="info-dorms"*ngFor="let dorm of Dorms; let iControl=index">
-                   <td>{{dorm.id}}</td>
-                   <td>{{dorm.name}}</td>
-                   <td>{{dorm.location}}</td>
-                   <td>
-                       <a class="btn btn-info" role="button" routerLink="/edit-dorm/{{dorm.id}}"> Info </a> 
-  
+                    <td>{{dorm.id}}</td>
+                    <td>{{dorm.name}}</td>
+                    <td>{{dorm.location}}</td>
+                    <td>
+                        <a class="btn btn-outline-dark" role="button" routerLink="/development/"> Info </a>
                     </td>
                </tr>
            </tbody>

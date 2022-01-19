@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <a class="btn btn-success" routerLink="/add-dorm/"> Add Dorm </a> 
+        <a class="btn btn-outline-dark" routerLink="/add-dorm/"> Add New Dorm 🛏️</a> 
 
     </div>
     <div class="card-body">
@@ -20,9 +20,9 @@
                    <td>{{dorm.name}}</td>
                    <td>{{dorm.location}}</td>
                    <td>
-                       <a class="btn btn-info" role="button" routerLink="/edit-dorm/{{dorm.id}}"> Edit </a> |
+                       <a class="btn btn-outline-light" role="button" routerLink="/edit-dorm/{{dorm.id}}"> ✏️ </a> |
 
-                       <a class="btn btn-danger" (click)="deleteDorm(dorm.id,iControl)" role="button"> Delete </a>  
+                       <a class="btn btn-outline-danger" (click)="deleteDorm(dorm.id,iControl)" role="button"> 🗑️ </a>  
                     </td>
                </tr>
            </tbody>

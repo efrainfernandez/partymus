@@ -15,16 +15,18 @@
 
 				<a class="nav-item nav-link" *ngIf="logoutbtn" routerLink="list-event">Events</a>
 				<a class="nav-item nav-link" *ngIf="logoutbtn" routerLink="list-dorm">Dorms</a>
-				<a class="nav-item nav-link" *ngIf="logoutbtn" routerLink="list-user">Users</a>				
+				<a class="nav-item nav-link" *ngIf="logoutbtn" routerLink="list-user">Users</a>	
+				<a class="nav-item nav-link" *ngIf="loginbtn" routerLink="list-events-user">Events for users</a>	
+				<a class="nav-item nav-link" *ngIf="loginbtn" routerLink="list-dorms-user">Dorms for users</a>				
 				<!--a la derecha-->
 				
-				<a class="nav-item nav-link" *ngIf="logoutbtn" class="btn btn-primary" (click)="logout()">logout</a>
+				<a class="nav-item nav-link" *ngIf="logoutbtn" class="btn btn-outline-secondary" (click)="logout()">logout</a>
 				<a class="nav-item nav-link" *ngIf="loginbtn" class="btn btn-outline-secondary" routerLink="login">Login</a>
 				<a class="nav-item nav-link" *ngIf="loginbtn" class="btn btn-outline-secondary" routerLink="register-user">Register</a>
 			</div>
 		</nav>
 		<div>
-			<p *ngIf="logoutbtn">->Bienvenido, admin</p>
+			<h2 *ngIf="logoutbtn" style="color:white" style="margin-left: 10px;">Bienvenido, admin</h2>
 		</div>
 		<div class="container">
 			<router-outlet></router-outlet>
