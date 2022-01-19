@@ -6,6 +6,7 @@
 }
 
 .navbar{
+
     width: 100%;
 }
 
@@ -24,9 +25,11 @@
     width: 100%;
     justify-content: right;
     margin-right: 100px;
+
     padding: 10px;
     display: flex;
     position: relative;
+
 }
 
 
@@ -34,4 +37,15 @@
 
 .nav-item{
     background: none;
+    text-decoration: none;
+    color: black;
 }
+
+.navbar-nav a{
+    margin: 0 10px;
+}
+.navbar-nav a:hover{
+background-color: rgb(25, 25, 151);
+
+}
+

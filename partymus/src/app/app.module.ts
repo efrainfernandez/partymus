@@ -31,6 +31,7 @@ import { ListDormsUserComponent } from './dorms/list-dorms-user/list-dorms-user.
 
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { DevelopmentComponent } from './development/development.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ListEventsUserComponent,
     ListDormsUserComponent,
 
-    DashboardComponent
+    DashboardComponent,
+      DevelopmentComponent
 
   ],
   imports: [

@@ -20,6 +20,7 @@ if (isset($_GET["consult"])){
     }
     else{  echo json_encode(["success"=>0]); }
 }
+
 //borrar pero se le debe de enviar una clave ( para borrado )
 if (isset($_GET["delete"])){
     $sqlUsers = mysqli_query($conexionBD,"DELETE FROM users WHERE id=".$_GET["delete"]);
@@ -32,14 +33,12 @@ if (isset($_GET["delete"])){
 //Inserta un nuevo registro y recepciona en método post los datos de nombre y correo
 if(isset($_GET["add"])){
     $data = json_decode(file_get_contents("php://input"));
-    $username=$data->username;
-    $password=$data->password;
     $name=$data->name;
-    $nacionality=$data->nacionality;
-    $dorm=$data->dorm;
-        if(($username!="")&&($password!="")&&($name!="")&&($nacionality!="")){
+    $password=$data->password;
+    $email=$data->email;
+        if(($name!="")&&($password!="")&&($email!="")){
             
-    $sqlUsers = mysqli_query($conexionBD,"INSERT INTO users(username, password, name, nacionality, dorm) VALUES('$username', '$password', '$name', '$nacionality', '$dorm') ");
+    $sqlUsers = mysqli_query($conexionBD,"INSERT INTO users(name, password, email) VALUES('$name', '$password', '$email')");
     echo json_encode(["success"=>1]);
         }
     exit();
@@ -50,13 +49,11 @@ if(isset($_GET["update"])){
     $data = json_decode(file_get_contents("php://input"));
 
     $id=(isset($data->id))?$data->id:$_GET["update"];
-    $username=$data->username;
-    $password=$data->password;
     $name=$data->name;
-    $nacionality=$data->nacionality;
-    $dorm=$data->dorm;
+    $password=$data->password;
+    $email=$data->email;
     
-    $sqlUsers = mysqli_query($conexionBD,"UPDATE users SET name='$name', password='$password', name='$name', nacionality='$nacionality', dorm='$dorm' WHERE id='$id'");
+    $sqlUsers = mysqli_query($conexionBD,"UPDATE users SET name='$name', password='$password', email='$email' WHERE id='$id'");
     echo json_encode(["success"=>1]);
     exit();
 }
@@ -67,6 +64,5 @@ if(mysqli_num_rows($sqlUsers) > 0){
     echo json_encode($users);
 }
 else{ echo json_encode([["success"=>0]]); }
-
 
 ?>

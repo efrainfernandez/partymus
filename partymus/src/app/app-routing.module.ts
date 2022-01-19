@@ -26,6 +26,8 @@ import { EventsAdminComponent } from './events/events-admin/events-admin.compone
 import { ListEventsUserComponent } from './events/list-events-user/list-events-user.component';
 import { ListDormsUserComponent } from './dorms/list-dorms-user/list-dorms-user.component';
 
+import { DevelopmentComponent } from './development/development.component';
+
 
 const routes: Routes = [
   {path: '',pathMatch:'full', redirectTo:'main'},
@@ -49,12 +51,10 @@ const routes: Routes = [
   {path: 'list-user',component: ListUserComponent},
   {path: 'events-admin',component: EventsAdminComponent},
   
-  {path: ' list-events-user',component:  ListEventsUserComponent},
-  {path: ' list-dorms-user',component:  ListDormsUserComponent}
-  
- 
+  {path: 'list-events-user',component:  ListEventsUserComponent},
+  {path: 'list-dorms-user',component:  ListDormsUserComponent},
 
-  
+  {path: 'development',component: DevelopmentComponent}
 
 ];
 
