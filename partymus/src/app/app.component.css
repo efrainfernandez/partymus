@@ -6,12 +6,31 @@
 }
 
 .navbar{
-    background: none;
+    width: 100%;
 }
 
-.nav{
-    background: none;
+
+.system{
+    background-color: none;
+    text-decoration: none;
+    justify-content: left;
+    margin: 20px;
+
 }
+
+
+.navbar-nav{
+    background: none;
+    width: 100%;
+    justify-content: right;
+    margin-right: 100px;
+    padding: 10px;
+    display: flex;
+    position: relative;
+}
+
+
+
 
 .nav-item{
     background: none;
