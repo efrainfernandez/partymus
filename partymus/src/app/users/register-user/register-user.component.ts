@@ -40,7 +40,7 @@ export class RegisterUserComponent implements OnInit {
       //Enviar la URL al user
 
       //--------------------------CHANGE-----------------------------//
-      //this.router.navigateByUrl('list-user');
+      this.router.navigateByUrl('main');
       //-------------------------------------------------------------//
     });
     
